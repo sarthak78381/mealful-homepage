@@ -7,8 +7,6 @@ import Contact from './components/contact/Contact';
 import SocialHandle from './components/socialHandle/SocialHandle';
 import './App.css';
 
-{/* importing all main components*/}
-
 
 
 
