@@ -1,0 +1,106 @@
+.contact__container{
+    height: 40vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid var(--op-bg-color);
+
+    .contact{
+        height: 70%;
+        width: 100%;
+
+        .grid__div{
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+    
+            .item{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .heading{
+                    width: 100%;
+                    padding: 1rem;
+                    font-weight: bolder;
+
+                    h4{
+                        color: var(--op-bg-color);
+                        font-size: 1.2rem;
+                        font-weight: lighter;
+                    }
+                }
+                .questions{
+                    width: 100%;
+                    padding: 1rem;
+
+                    p{
+                        padding: .2rem;
+                        color: var(--op-bg-color);
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                        border-bottom: 1px solid var(--bg-color);
+                        font-weight: lighter;
+
+                        &:hover{
+                            font-size: 1.2rem;
+                            border-bottom: 1px solid #333;
+                        }
+                    }
+                }
+            }
+        
+            .logo{
+                height: 50px;
+                width: 150px;
+        
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .contact__container{
+        height: 80vh;
+        
+        .contact{
+            height: 90%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+    
+            .grid__div{
+                display: flex;
+                flex-direction: column;
+        
+                .item{
+                    justify-content: flex-start;
+                    margin: 1rem 0;
+    
+                    .heading{
+                        padding: 0;
+                        margin-bottom: .5rem;
+                    }
+                    .questions{
+                        padding: 0;
+                        margin-bottom: .5rem;
+                    }
+                }
+            
+                .logo{
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

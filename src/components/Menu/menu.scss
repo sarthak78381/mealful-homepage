@@ -1,0 +1,109 @@
+.menu__maincontainer{
+    width: 100vw;
+    height: auto;
+
+    .menu__container{
+        text-align: center;
+
+        .menu__optioncontainer{
+            width: 100%;
+            height: auto;
+            justify-content: space-between;
+
+            .item {
+                p{
+                    padding: 1.5rem 0;
+                    font-size: clamp(1rem, 3.5vw, 2rem);
+                    font-weight: lighter;
+                    color: var(--op-bg-color);
+                }
+                
+                button{
+                    all: unset;
+                    font-size: clamp(.35rem, 3.5vw, 1rem);
+                    padding: clamp(.35rem, 3.5vw, .75rem) clamp(.7rem, 3.5vw, 1.5rem);
+                    border: 1px solid var(--bg-color);
+                    border-radius: 10px;
+                    color: var(--op-bg-color);
+                    cursor: pointer;
+                    
+                    &:hover{
+                        filter: brightness(170%);
+                        border: 1px solid #333;
+                    }
+                }
+                
+                .active{
+                    border: 1px solid #333;
+                }
+                
+            }
+        }
+
+        .menucard__container{
+            margin: 1.5rem;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+        }
+
+        .request{
+            padding: 3rem;
+            border-bottom: 1px solid var(--op-bg-color);
+            button {
+                all: unset;
+                background-color: var(--primary-color);
+                color: var(--op-bg-color);
+                padding: 1rem 3rem;
+                border-radius: 10px;
+                transition: all .2s ease;
+                cursor: pointer;
+
+                &:hover{
+                    filter: brightness(80%);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .menu__maincontainer{
+
+        .menu__container{
+    
+            .menucard__container{
+                margin: .5rem;
+                height: auto;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .request{
+                padding: 1.5rem; 
+
+                button{
+                    padding: .5rem 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .menu__maincontainer{
+        
+        .menu__container{
+            
+            .menucard__container{
+                margin: .5rem;
+                height: auto;
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.timetable__maincontainer{
+    width: 100vw;
+    height: 15%;
+    min-height: 5rem;
+
+    
+    .timetable__container{
+        min-height: 5rem;
+        height: 100%;
+        padding: .5rem;
+        color: white;
+        border-bottom: 1px solid var(--op-bg-color);
+
+        .card__container{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
