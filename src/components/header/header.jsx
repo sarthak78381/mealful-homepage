@@ -19,7 +19,9 @@ function Header() {
 
     return size > 1000 ? (<HeaderPc/>) : (
         <div>
+            {/* mobile device responsive navbar */}
             <HeaderMobile isHamClicked ={isHamClicked} hamClicked={hamClicked} isClicked={isClicked}/>
+            {/* full screen menu page, Appears, once user clicks hamicon */}
             <div className={`menu ${hamClicked ? "showMenu":""} aligndiv__center`}>
                 <div className='aligndiv__center'>
                     <div className='aligndiv__center'>
@@ -32,7 +34,8 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className={`dropbox_mobile ${(clicked && hamClicked) ? "":"hidden_mobile"}`}>
+            {/* dropdown menu for mobile */}
+            <div className={`dropbox_mobile ${(clicked && hamClicked) ? "":"hidden_mobile"}`}> 
                 <p>Profile</p>
                 <p>OrderHistory</p>
                 <p>Get Free Meals</p>

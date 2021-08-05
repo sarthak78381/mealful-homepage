@@ -18,6 +18,7 @@ function Menu() {
                     </div>
                 </div>
                 <div className="menucard__container">
+                    {/* looping menu array, containing no. of items to be rendered by MenuCard components, later it will be connected by backend to get menu array */}
                     {menu.map((item, idx) => <MenuCard key={idx} item = {item}/>)}
                 </div>
                 <div className="request">

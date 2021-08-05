@@ -3,7 +3,7 @@ import React from 'react';
 import './menucard.scss';
 
 function MenuCard({item}) {
-
+    // getting menu each item object, with details to render on screen
     const {name, chefName, spec, desc, imgUrl} = item;
     return (
         <div className='menu__cardcontainer'>
@@ -17,6 +17,7 @@ function MenuCard({item}) {
                         <h5><span>by</span> {chefName}</h5>
                     </div>
                     <div className="card__spec">
+                        {/* looping spec array */}
                         {spec.map((e, idx) => <div key={idx}><p className={e.color}>{e.name}</p></div>)}
                     </div>
                     <div className="card__description">

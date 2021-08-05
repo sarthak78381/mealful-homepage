@@ -1,3 +1,4 @@
+// creating menu array, holding multiple objects with items details
 const menu = [
     {
         name: "Tex Mex Burrito",

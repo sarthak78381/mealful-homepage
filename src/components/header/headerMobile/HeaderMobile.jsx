@@ -11,7 +11,9 @@ function HeaderMobile({hamClicked, isHamClicked, isClicked}) {
                         <img src="https://www.mealful.ca/img/mealful-22.svg" alt="" />
                     </div>
                     <div className="hamburger aligndiv__center" onClick={() => {
+                        // closing/opening the nav menu
                         isHamClicked(!hamClicked);
+                        // closing dropdown menu, if left open by user
                         isClicked(false);
                     }}>
                         <div className={`${hamClicked ? 'checked':null} aligndiv__center`}></div>

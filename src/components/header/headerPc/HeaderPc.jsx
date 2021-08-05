@@ -3,7 +3,8 @@ import './header-pc.scss';
 
 
 function HeaderPc() {
-    const [clicked, isClicked] = useState(false);
+    // keep a check, if user opens dropdown menu or not
+    const [clicked, isClicked] = useState(false); 
     return (
         <nav>
             <div className="aligndiv aligndiv__center nav-container">
@@ -19,6 +20,7 @@ function HeaderPc() {
                     </div>
                 </div>
             </div>
+            {/* dropdown menu */}
             <div className={`dropbox ${clicked ? "":"hidden"}`}>
                 <p>Profile</p>
                 <p>OrderHistory</p>
