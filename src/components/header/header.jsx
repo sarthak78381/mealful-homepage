@@ -29,18 +29,30 @@ function Header() {
                             <li><a href="#home" onClick={() => {isHamClicked(!hamClicked)}}>Buy Meal Plans</a></li>
                             <li><a href="#home" onClick={() => {isHamClicked(!hamClicked)}} className='active'>Schedule Meals</a></li>
                             <li><a href="#home" onClick={() => {isHamClicked(!hamClicked)}}>Upcoming</a></li>
-                            <li><a href="#home" onClick={() => {isClicked(!clicked)}}><i className="far fa-user"></i> Hello, Intern <i className="fas fa-caret-down"></i></a></li>
+                            <li>
+                                {
+                                    clicked ? (
+                                    //    dropdown menu for mobile
+                                        <div className={`dropbox_mobile ${(clicked && hamClicked) ? "":"hidden_mobile"}`}>
+                                            <div className="close"><i class="fas fa-times" onClick={() => isClicked(!clicked)}></i></div> 
+                                            <div className='dropdown__menu'>
+                                                <p>Profile</p>
+                                                <p>OrderHistory</p>
+                                                <p>Get Free Meals</p>
+                                                <p>FAQ's</p>
+                                                <p>Logout</p>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                    <a href="#home" onClick={() => {isClicked(!clicked)}}><i className="far fa-user">
+                                        </i> Hello, Intern <i className="fas fa-caret-down"></i>
+                                    </a>
+                                    )
+                                }
+                            </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            {/* dropdown menu for mobile */}
-            <div className={`dropbox_mobile ${(clicked && hamClicked) ? "":"hidden_mobile"}`}> 
-                <p>Profile</p>
-                <p>OrderHistory</p>
-                <p>Get Free Meals</p>
-                <p>FAQ's</p>
-                <p>Logout</p>
             </div>
         </div>
     )
